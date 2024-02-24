@@ -1,4 +1,6 @@
-# FYP_Project
+# FYP_Project.
+
+Project Title: Job and Scholarship Explorer System (JSES)
 This is all about our Final Year Project as Software Engineering students.
 
 Project Team
