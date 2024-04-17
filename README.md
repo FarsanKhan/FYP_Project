@@ -13,3 +13,4 @@ Saud Akbar 	        22661	     	        BSSE          03065939379	             2
  Project Title: Job and Scholarship Explorer System (JSES)
 
 chapter 1 completed 
+ chapter 2 completed
