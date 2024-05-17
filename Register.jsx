@@ -1,18 +1,16 @@
-
 import React, { useContext, useState } from "react";
-import { FaRegUser } from "react-icons/fa"; //renders the "Regular User" icon from the Font Awesome 5 library
-import { MdOutlineMailOutline } from "react-icons/md"; //renders the Material Design Outline Mail icon 
-import { RiLock2Fill } from "react-icons/ri"; //renders the "Lock (Filled)" icon from the Remix Icon set.
+import { FaRegUser } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { RiLock2Fill } from "react-icons/ri";
 import { FaPencilAlt } from "react-icons/fa";
-import { Link, NavLink, Navigate } from "react-router-dom";
-import axios from "axios"; //Axios library, which is a popular promise-based HTTP(GET, POST, PUT, DELETE) client for making API requests in web applications.
+import { Link, Navigate } from "react-router-dom";
+import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
 
@@ -35,7 +33,6 @@ const Register = () => {
       setName("");
       setEmail("");
       setPassword("");
-      // setPhone("");
       setRole("");
       setIsAuthorized(true);
     } catch (error) {
