@@ -791,3 +791,107 @@ p {
     width: 100%;
   }
 }
+
+
+//Applications
+.my_applications {
+  background: #f1f3f6;
+  padding: 50px 20px;
+  min-height: 885px;
+}
+.my_applications .container {
+  max-width: 1500px;
+  min-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.job_seeker_card {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  padding: 20px 0;
+}
+.job_seeker_card .detail {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.job_seeker_card .detail {
+  flex: 2;
+}
+.job_seeker_card .detail span {
+  font-weight: bold;
+}
+.job_seeker_card .resume {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.job_seeker_card .resume {
+  position: relative;
+  height: 250px;
+}
+.job_seeker_card .resume img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.job_seeker_card .btn_area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.job_seeker_card .btn_area button {
+  background: #111111;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (max-width: 1520px) {
+  .my_applications .container {
+    min-width: 100%;
+  }
+}
+@media (max-width: 1150px) {
+  .job_seeker_card .detail {
+    flex: 1;
+  }
+  .job_seeker_card .resume {
+    flex: 1;
+  }
+  .job_seeker_card .btn_area {
+    flex: 1;
+  }
+}
+@media (max-width: 850px) {
+  .job_seeker_card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .job_seeker_card .detail {
+    flex: none;
+  }
+  .job_seeker_card .resume {
+    flex: none;
+    width: 320px;
+    margin: 30px 0;
+  }
+  .job_seeker_card .btn_area {
+    flex: none;
+  }
+}
+@media (max-width: 360px) {
+  .job_seeker_card,
+  .job_seeker_card .resume {
+    width: 100%;
+  }
+}
+
