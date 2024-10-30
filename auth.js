@@ -1,16 +1,50 @@
-import { User } from "../models/userSchema.js";
-import { catchAsyncErrors } from "./catchAsyncError.js";
-import ErrorHandler from "./error.js";
-import jwt from "jsonwebtoken";
+const db = require("../database/models");
+const jwt = require("jsonwebtoken");
+const { User } = db.sequelize.models;
 
-export const isAuthenticated = catchAsyncErrors(async (req, res, next) => {
-  const { token } = req.cookies;
-  if (!token) {
-    return next(new ErrorHandler("User Not Authorized", 401));
+module.exports = async (req, res, next) => {
+  try {
+    const authToken = req.headers["auth-token"];
+    if (!authToken) {
+      res.status(401).json({ message: "Unauthorized" });
+      return;
+    }
+
+    jwt.verify(authToken, process.env.APP_SECRET);
+    const decoded = jwt.decode(authToken);
+    if (!decoded.userId) {
+      res.status(401).json({ message: "Unauthorized" });
+      return;
+    }
+    const user = await User.findOne({
+      where: { id: decoded.userId, verified: true },
+      attributes: [
+        "id",
+        "type",
+        "name",
+        "email",
+        "location",
+        "skills",
+        "headline",
+      ],
+    });
+
+    if (user === null) {
+      res.status(401).json({ message: "Unauthorized" });
+      return;
+    }
+
+    req.user = {
+      id: user.id,
+      type: user.type,
+      name: user.name,
+      email: user.email,
+      location: user.location,
+      skills: user.skills,
+      headline: user.headline,
+    };
+    next();
+  } catch (error) {
+    next(error);
   }
-  const decoded = jwt.verify(token, 'Saudkhan');
-
-  req.user = await User.findById(decoded.id);
-
-  next();
-});
+};
