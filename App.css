@@ -1,76 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
-}
-::-webkit-scrollbar {
-  display: none;
-}
-h1 {
-  font-size: 4rem;
-}
-h2 {
-  font-size: 3.4rem;
-}
-h3 {
-  font-size: 2.7rem;
-}
-h4 {
-  font-size: 2.2rem;
-}
-h5 {
-  font-size: 2rem;
-}
-h6 {
-  font-size: 1.5rem;
-}
-p {
-  font-size: 20px;
-}
-@media (max-width: 1520px) {
-  h1 {
-    font-size: 3.4rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-  h3 {
-    font-size: 2.5rem;
-  }
-  h4 {
-    font-size: 2rem;
-  }
-  h5 {
-    font-size: 1.7rem;
-  }
-  h6 {
-    font-size: 1.3rem;
-  }
-}
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.6rem;
-  }
-  h2 {
-    font-size: 2.3rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  h4 {
-    font-size: 1.8rem;
-  }
-  h5 {
-    font-size: 1.45rem;
-  }
-  h6 {
-    font-size: 1.15rem;
-  }
-}
 .authPage {
   display: flex;
   min-width: 1500px;
@@ -104,17 +31,16 @@ p {
   text-align: center;
   margin-bottom: 30px;
 }
-.authPage .container .header .logopic{
+.authPage .container .header .logopic {
   width: 300px;
   height: auto;
   margin: 10px;
-
 }
 .authPage .container form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 500px; 
+  width: 500px;
 }
 .authPage .container form .inputTag {
   display: flex;
@@ -141,7 +67,7 @@ p {
 .authPage .container form .inputTag div svg {
   width: 10%;
   font-size: 1.5rem;
-  background: #1378dd;
+  background: #004182;
   height: 100%;
   padding: 8px;
   color: #fff;
@@ -153,17 +79,17 @@ p {
   margin-top: 25px;
   font-weight: 700;
   color: #fff;
-  background: #1378dd;
+  background: #004182;
   font-size: 1.2rem;
   border-radius: 7px;
 }
 .authPage .container form a {
   padding: 12px;
   text-align: center;
-  border: 1px solid #1378dd;
+  border: 1px solid #004182;
   margin-top: 25px;
   font-weight: 700;
-  color: #1378dd;
+  color: #004182;
   font-size: 1.2rem;
   text-decoration: none;
   border-radius: 7px;
@@ -180,7 +106,8 @@ p {
   width: 550px;
   height: 550px;
 } */
-@media (max-width: 1520px) { /*min-width 100% will apply when we go below 1520px in viewport & vice-versa for max-width*/
+@media (max-width: 1520px) {
+  /*min-width 100% will apply when we go below 1520px in viewport & vice-versa for max-width*/
   .authPage {
     min-width: 100%;
   }
@@ -191,20 +118,20 @@ p {
     height: auto;
   }
 }
-   @media (max-width: 830px) {
-    .authPage .container form {
+@media (max-width: 830px) {
+  .authPage .container form {
     width: 300px;
-    }
-  } 
-  .authPage .container {
-    flex: none;
-    width: 100%;
-    justify-content: flex-start;
-    padding: 40px 20px;
   }
+}
+.authPage .container {
+  flex: none;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 40px 20px;
+}
 
 .footerShow {
-  background: #1378dd;
+  background: #004182;
   display: flex;
   justify-content: space-between;
   padding: 25px 120px;
@@ -222,7 +149,7 @@ p {
   color: #f1f3f6;
 }
 .footerShow div a:hover {
-  color: #f1f3f6;
+  color: black;
   transform: scale(1.2);
   transition: all 0.3s;
 }
@@ -241,9 +168,8 @@ p {
     text-align: center;
   }
 }
-.navbar .container{
-  color: #1378dd;
-  ;
+.navbar .container {
+  color: #004182;
 }
 .navbarHide {
   display: none;
@@ -286,7 +212,7 @@ p {
   margin-top: 1.5rem;
   max-width: 600px;
 }
- .heroSection .container .image {
+.heroSection .container .image {
   overflow: hidden;
 }
 .heroSection .container .image img {
@@ -294,7 +220,7 @@ p {
   height: auto;
   margin-top: -100px;
   margin-left: 60px;
-} 
+}
 .heroSection .details {
   display: flex;
   justify-content: space-between;
@@ -307,7 +233,6 @@ p {
   background: #f1f3f6;
   width: 220px;
   padding: 10px 20px;
-  
 }
 .heroSection .details .card .icon {
   font-size: 24px;
@@ -416,7 +341,7 @@ p {
   justify-content: center;
 }
 .howitworks .container .banner .card:nth-child(2) {
-  background: #1378dd;
+  background: #004182;
   color: #fff;
 }
 .howitworks .container .banner .card svg {
@@ -425,7 +350,7 @@ p {
 }
 .howitworks .container .banner .card p:last-child {
   font-size: 14px;
-  color: rgb(161, 161, 161);
+  color: gray;
 }
 @media (max-width: 1520px) {
   .howitworks .container {
@@ -468,7 +393,7 @@ p {
 }
 .categories .banner .card {
   width: 320px;
-  background: #000000;
+  background: red;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -485,7 +410,7 @@ p {
   font-size: 24px;
   padding: 10px;
   background: rgb(233, 249, 255);
-  color: #111111;
+  color: #2d3748;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -560,7 +485,7 @@ p {
 .companies .container .banner .card .content .icon {
   padding: 10px;
   font-size: 24px;
-  color: #111111;
+  color: #2d3748;
   background: rgb(233, 249, 255);
   display: flex;
   justify-content: center;
@@ -693,7 +618,7 @@ p {
   flex-direction: column;
   align-items: center;
 }
-.jobDetail .jd{
+.jobDetail .jd {
   margin-top: 40px;
   margin-bottom: -100px;
 }
@@ -715,7 +640,7 @@ p {
   font-weight: 400;
 }
 .jobDetail .container .banner a {
-  background-color: #111111;
+  background-color: #2d3748;
   color: rgb(233, 249, 255);
   font-size: 20px;
   font-weight: 400;
@@ -769,7 +694,7 @@ p {
   outline: none;
 }
 .application .container form button {
-  background-color: #111111;
+  background-color: #2d3748;
   color: rgb(233, 249, 255);
   font-size: 20px;
   font-weight: 400;
@@ -791,9 +716,6 @@ p {
     width: 100%;
   }
 }
-
-
-//Applications
 .my_applications {
   background: #f1f3f6;
   padding: 50px 20px;
@@ -848,7 +770,7 @@ p {
   justify-content: center;
 }
 .job_seeker_card .btn_area button {
-  background: #111111;
+  background: #d9534f;
   color: #fff;
   border: none;
   padding: 10px 30px;
@@ -894,8 +816,6 @@ p {
     width: 100%;
   }
 }
-//job related css
-
 
 .job_post {
   background: #f1f3f6;
@@ -972,11 +892,11 @@ p {
 }
 .job_post .container form button {
   width: 100%;
-  background: #1378dd;
+  background: #2d3748;
   font-size: 20px;
   padding: 10px 30px;
   border: none;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
@@ -1112,15 +1032,15 @@ p {
   text-transform: uppercase;
   padding: 7px;
   border: none;
-  background: #ffffff;
+  background: #ffc107;
 }
 .myJobs .container .banner .card .button_wrapper .delete_btn {
-  background: #111111;
+  background: #d9534f;
   color: #f1f3f6;
 }
 .myJobs .container .banner .card .button_wrapper .check_btn {
   background: transparent;
-  color: red;
+  color: #2d3748;
   border: 1px solid #2d3748;
   border-radius: 7px;
   width: 50px;
@@ -1178,7 +1098,7 @@ p {
   }
 }
 nav {
-  background: #1378dd;
+  background: #18191c;
   padding: 0 20px;
 }
 nav .container {
@@ -1189,7 +1109,7 @@ nav .container {
   justify-content: space-between;
 }
 nav .container .logo {
-  width: 160px;
+  width: 120px;
   height: 120px;
 }
 nav .container .logo img {
@@ -1212,11 +1132,11 @@ nav .menu button {
 }
 nav .menu button:hover {
   color: #f1f3f6;
-  background: #004182;
+  background: #184235;
   transition: all 0.3s;
   cursor: pointer;
   font-weight: 500;
-  border: 1px solid #004182;
+  border: 1px solid #184235;
 }
 nav .menu li a {
   color: #f1f3f6;
@@ -1226,15 +1146,13 @@ nav .menu li a {
   position: relative;
 }
 nav .menu li a:hover {
-  color: #f9f9fa;
-  font-weight: 700;
-
+  color: #2d5649;
   transition: all 0.3s;
 }
 nav .menu li a::before {
   content: "";
   position: absolute;
-  background: #f9f9fa;
+  background: #184235;
   height: 1px;
   width: 100%;
   left: -100%;
@@ -1254,9 +1172,9 @@ nav .hamburger {
   }
 }
 @media (max-width: 1130px) {
-  .page {
+  /* .page {
     padding-top: 120px;
-  }
+  } */
   nav {
     position: fixed;
     width: 100%;
@@ -1304,21 +1222,79 @@ nav .hamburger {
     -moz-box-shadow: 9px 0px 16px 0px rgba(0, 0, 0, 0.75);
   }
   nav .show-menu li a {
-    color: #004182;
+    color: #184235;
     font-weight: 600;
   }
   nav .show-menu button {
-    color: #004182;
-    border: 1px solid #004182;
+    color: #184235;
+    border: 1px solid #184235;
     font-weight: 600;
   }
   nav .show-menu button:hover {
-    background: #004182;
+    background: #18191c;
     color: #f1f3f6;
   }
 }
 @media (max-width: 490px) {
   nav .menu {
     width: 100%;
+  }
+}
+.notfound {
+  min-height: 750px;
+}
+.notfound .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notfound .content a {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 7px 30px;
+  background: transparent;
+  border: 1px solid #184235;
+  color: #184235;
+  text-decoration: none;
+}
+.notfound .content a:hover {
+  background: #184235;
+  transition: all 0.3s;
+  color: #f1f3f6;
+}
+.resume-modal {
+  width: 100%;
+  display: flex;
+  background: #00000085;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.resume-modal .modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.resume-modal .modal-content .close {
+  position: absolute;
+  right: 36px;
+  top: 35px;
+  font-size: 50px;
+  color: #d9534f;
+}
+.resume-modal .modal-content .close:hover {
+  cursor: pointer;
+}
+.resume-modal .modal-content img {
+  max-width: 550px;
+  height: auto;
+}
+@media (max-width: 1130px) {
+  .resume-modal {
+    z-index: 11;
   }
 }
