@@ -4,6 +4,17 @@ const { User } = db.sequelize.models;
 
 module.exports = async (req, res, next) => {
   try {
+    console.log(req);
+
+    if (
+      req.route &&
+      req.route.path &&
+      (req.route.path.includes("/jobs/featured") ||
+        req.route.path.includes("/jobs/public"))
+    ) {
+      next();
+      return;
+    }
     const authToken = req.headers["auth-token"];
     if (!authToken) {
       res.status(401).json({ message: "Unauthorized" });
