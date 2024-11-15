@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-size-small: 1rem;
+  --artdeco-reset-typography-font-family-sans: -apple-system, system-ui,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu,
+    Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica,
+    Arial, sans-serif;
+  --artdeco-reset-base-vertical-align-baseline: baseline;
+  --artdeco-reset-base-border-zero: 0;
+  --artdeco-reset-base-margin-zero: 0;
+  --artdeco-reset-base-padding-zero: 0;
+  --artdeco-reset-base-outline-zero: 0;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --search-bg: #edf3f8;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--artdeco-reset-typography-font-family-sans);
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html,
+body,
+#root {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body:not(:has(#landing, #auth-layout)) {
+  min-width: 1196px;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.job-card:hover .job-title {
+  text-decoration: underline;
+}
+
+.loader,
+.loader-lg {
+  width: 26px;
+  padding: 4px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgb(127, 172, 246);
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+
+.jobs-list-item-active {
+  box-shadow: 2px 0 0 #01754f inset;
+  background-color: #edf3f8;
+}
+
+.incoming-call {
+  box-shadow: 0px 0px 0px 1px rgb(140 140 140/0.2), 0px 4px 4px rgb(0 0 0/0.3);
+}
+
+.message-list {
+  border-radius: 0.8rem 0.8rem 0 0;
+  box-shadow: 0px 0px 0px 1px rgb(140 140 140/0.2), 0px 4px 4px rgb(0 0 0/0.3);
+  transition-duration: 167ms;
+  animation: fade-in 167ms cubic-bezier(0.4, 0, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.message-list.is-minimized {
+  transform: translateY(100%) translateY(-48px);
+}
+
+.message-list .header {
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.message-list .header:hover {
+  background: #f8fafd;
+}
+
+.loader-lg {
+  width: 40px;
+  padding: 6px;
+}
+
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.rsw-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-editor .rsw-ce {
+  height: 100px;
+  overflow: auto;
+}
+
+.message-editor .rsw-ce {
+  height: 100px;
+  overflow: auto;
+}
+
+.rsw-ce {
+  font-size: 0.875rem;
+}
+
+.left-side:hover .left-side-title {
+  text-decoration: underline;
+}
+
+.profile-job-list-item:hover .profile-job-list-item-title {
+  text-decoration: underline;
+}
+
+.message-editor .rsw-editor {
+  border-left: 0px;
+  border-radius: 0px;
+  height: 150px !important;
+  min-height: 150px !important;
+}
+
+.message-editor.sm .rsw-editor {
+  height: 100px !important;
+  min-height: 100px !important;
+}
+
+.rsw-toolbar {
+  padding: 0.2rem 0rem;
+}
+
+.rsw-ce:focus {
+  outline: none !important;
+}
+
+.rsw-editor {
+  min-height: 358px !important;
+}
+
+.report-modal-option:before {
+  content: " ";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+
+.applicant-item:hover .applicant-name {
+  text-decoration: underline;
+}
+
+.report-modal-option:before {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0/0.75) !important;
+  height: 24px !important;
+  left: 0;
+  top: 13px;
+  width: 24px !important;
+  background-clip: border-box !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 50%;
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 167ms;
+}
+
+.report-modal-option.selected::before {
+  background-color: rgb(21 128 61 / 1);
+  box-shadow: inset 0 0 0 1px transparent !important;
+}
+
+.report-modal-option.selected::after {
+  content: " ";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  background-color: #fff !important;
+  border-radius: 50% !important;
+  height: 12px !important;
+  left: 6px;
+  top: 19px;
+  width: 12px !important;
+  background-clip: border-box !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+.required-label::after {
+  content: "*";
+}
+
+.select-trigger .option-description {
+  display: none;
+}
+
+.icon-nav {
+  min-height: 52px px;
+  min-width: 80px;
+}
+
+.label-color {
+  color: rgb(0 0 0/0.6);
+}
+
+.icon-nav:hover svg,
+.icon-nav:hover p,
+.icon-nav.active svg,
+.icon-nav.active p {
+  color: #191919 !important;
+}
+
+.icon-nav::after {
+  border-bottom: 2px solid rgb(0 0 0/0.9);
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+.icon-nav.active::after {
+  transform: scaleX(1);
+}
+
+.lined-box-shadow {
+  box-shadow: 0px 0px 0px 1px rgb(140 140 140/0.2);
+}
+
+.border-bottom-1 {
+  border-bottom: 1px solid rgb(140 140 140/0.2);
+}
+
+.ant-descriptions-item-label {
+  font-weight: 700 !important;
+}
+
+.absolute-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.meeting-icon svg {
+  color: white;
+}
+/* 
+.meeting-icon:hover svg {
+  color: black;
+} */
